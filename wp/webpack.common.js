@@ -1,3 +1,5 @@
+import {CleanWebpackPlugin} from 'clean-webpack-plugin'
+
 export default
 {
   entry: './src/index.js',
@@ -26,5 +28,9 @@ export default
         }
       }
     ]
-  }
+  },
+  plugins:
+  [
+    new CleanWebpackPlugin()
+  ]
 }

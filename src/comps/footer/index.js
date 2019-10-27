@@ -6,6 +6,7 @@ export default
 {
   const el=
   <Div>
+    &copy; 2019 roger gomez
   </Div>
   return el
 }

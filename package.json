@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "transpile-wp": "babel webpack.config.js -o wptranspiled.config.js",
-    "start": "npm run transpile-wp&& webpack-dev-server --config wptranspiled.config.js",
-    "build": "npm run transpile-wp&& webpack --mode production --config wptranspiled.config.js"
+    "transpile-wp": "babel wp -d wpt",
+    "start": "npm run transpile-wp && webpack-dev-server --open --config wpt/webpack.dev.js",
+    "build": "npm run transpile-wp && webpack --config wpt/webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "file-loader": "^4.2.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -24,7 +25,8 @@
     "react-transition-group": "^4.3.0",
     "styled-components": "^4.4.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.9.0"

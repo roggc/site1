@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "transpile-wp":"babel webpack.config.js -o wptranspiled.config.js",
-    "start":"npm run transpile-wp&& webpack-dev-server --config wptranspiled.config.js",
-    "build":"npm run transpile-wp&& webpack --mode production --config wptranspiled.config.js"
+    "transpile-wp": "babel webpack.config.js -o wptranspiled.config.js",
+    "start": "npm run transpile-wp&& webpack-dev-server --config wptranspiled.config.js",
+    "build": "npm run transpile-wp&& webpack --mode production --config wptranspiled.config.js"
   },
   "keywords": [],
   "author": "",

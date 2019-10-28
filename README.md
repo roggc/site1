@@ -1,3 +1,3 @@
 # site1
 
-developing my first site using webpack, webpack-dev-server and react-router-dom 😁
+developing my first site using webpack and webpack-dev-server 😁

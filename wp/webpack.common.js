@@ -4,10 +4,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 export default
 {
   entry: './src/index.js',
-  output:
-  {
-    filename: './bundle.js'
-  },
   module:
   {
     rules:

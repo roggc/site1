@@ -1,6 +1,7 @@
-dist
-node_modules
-wpt
+/dist
+/node_modules
+/wpt
 /.firebaserc
 /firebase.json
-.firebase
+/.firebase
+.DS_Store

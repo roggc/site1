@@ -1,4 +1,5 @@
 import {CleanWebpackPlugin} from 'clean-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 export default
 {
@@ -17,20 +18,28 @@ export default
         exclude: /node_modules/
       },
       {
-        test: /\.(html)$/,
+        test: /\.(png|jpe?g|gif|ico)$/i,
         use:
-        {
-          loader: 'file-loader',
-          options:
+        [
           {
-            name: './[name].html',
+            loader: 'file-loader',
+            options:
+            {
+              name: '[name].[ext]'
+            }
           }
-        }
+        ]
       }
     ]
   },
   plugins:
   [
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin
+    (
+      {
+        template:'./src/public/index.html'
+      }
+    )
   ]
 }
